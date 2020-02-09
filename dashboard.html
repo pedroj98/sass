@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="imagenes/corona.png" />
+
+    <title>Corona-News</title>
+
+    <!-- libreria Bootstrap -->
+    <link rel="stylesheet" href="css/main.css">
+
+
+
+
+</head>
+
+<body class="nav-fixed">
+
+    <!--navegador-->
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark pt-3 pb-3">
+        <img src="imagenes/corona.png" class="corona-dashboard">
+        <a class="navbar-brand" href="index.html">CORONA-NEWS</a>
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Introduzca busqueda" />
+                <div class="input-group-append">
+                    <button class="btn btn-primary mr-2" type="button">Buscar</button>
+                   
+                </div>
+               <a href="formulario.html"><i class="fas fa-user usuario ml-3 mt-2"></i></a> 
+            </div>
+        </form>
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt dashboard-nav-icon"></i></div>
+                            Paginas
+                        </a>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns dashboard-nav-icon"></i></div>
+                            Miembros
+                        </a>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open dashboard-nav-icon"></i></div>
+                            Multimedia
+
+                        </a>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area dashboard-nav-icon"></i></div>
+                            Navegacion
+                        </a><a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table dashboard-nav-icon"></i></div>
+                            Multimedia
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Realizado por:</div>
+                    Pedro Jose Castro
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Panel de Control</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Dashboard / Graficos</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 text-center">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">Tarjeta Amarilla</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <p class="small text-white stretched-link ">Con color modificado desde _variables.scss de Boostrap</p>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 text-center">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">Tarjeta Azul</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <p class="small text-white stretched-link ">Con color modificado desde _variables.scss de Boostrap</p>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 text-center">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">Tarjeta Roja</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <p class="small text-white stretched-link ">Con color modificado desde _variables.scss de Boostrap</p>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 text-center">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">Tarjeta Verde</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <p class="small text-white stretched-link ">Con color modificado desde _variables.scss de Boostrap</p>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Visitantes Ultimo Año
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>Visitantes ultimo año
+                                </div>
+                                <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header"><i class="fas fa-table mr-1"></i>Ejemplo de tabla</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>37</td>
+                                            <td>2008/12/11</td>
+                                            <td>$136,200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>New York</td>
+                                            <td>65</td>
+                                            <td>2008/09/26</td>
+                                            <td>$645,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>64</td>
+                                            <td>2011/02/03</td>
+                                            <td>$234,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>38</td>
+                                            <td>2011/05/03</td>
+                                            <td>$163,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>Tokyo</td>
+                                            <td>37</td>
+                                            <td>2009/08/19</td>
+                                            <td>$139,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>New York</td>
+                                            <td>61</td>
+                                            <td>2013/08/11</td>
+                                            <td>$98,540</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+
+            </footer>
+        </div>
+    </div>
+
+    <!--plugins-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="plugins//chart-area-demo.js"></script>
+    <script src="plugins/chart-bar-demo.js"></script>
+
+      <!-- iconos -->
+  <script src="https://kit.fontawesome.com/e4206cf674.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
